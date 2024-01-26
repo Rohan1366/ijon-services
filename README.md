@@ -17,8 +17,8 @@ This is a React table component with pagination, add, and delete row functionali
 
 ## For Login Use Following Email Ans Password:
 
-Email - user01@gmail.com
-Password - 123456
+-Email - user01@gmail.com
+-Password - 123456
 
 ## Installation
 
