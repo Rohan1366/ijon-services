@@ -15,7 +15,7 @@ This is a React table component with pagination, add, and delete row functionali
 - Add new rows to the table.
 - Delete rows from the table.
 
-## For Login Use Following Email Ans Password:
+## For Login Use Following Email And Password:
 
 - Email - user01@gmail.com
 - Password - 123456
