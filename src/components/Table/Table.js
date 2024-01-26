@@ -3,6 +3,7 @@ import './Table.css'
 import { useState , useEffect } from 'react';
 import { useTable } from '../Context/TableContext';
 import Form from '../Form';
+import toast from 'react-hot-toast';
 const Table = () => {
   const { state, dispatch } = useTable();
   const [currentPage, setCurrentPage] = useState(1);
@@ -21,6 +22,7 @@ const closeAddForm = () => {
 
 const handleDeleteRow = (id) => {
   dispatch({ type: 'DELETE_ROW', payload: id });
+  toast.success("Deleted user Succesfully!" );
 };
 const totalPages = Math.ceil(state.tableData.length / pageSize);
 const startIndex = (currentPage - 1) * pageSize;

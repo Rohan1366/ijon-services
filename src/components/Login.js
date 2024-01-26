@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { loginContext } from "./Context/LoginContext";
-
+import { toast } from "react-hot-toast";
 var loginStyle = {
   width: "400px",
   padding: "30px",
@@ -27,8 +27,12 @@ function Login(props) {
         isLoggedIn: true,
         user: "Rohan",
       });
+      toast.success("Login Succesfully!"
+        
+      );
     } else {
-      alert("Please Check the Credentials");
+       toast.error("Wrong Credentials!");
+      //alert("wrong")
     }
   };
 

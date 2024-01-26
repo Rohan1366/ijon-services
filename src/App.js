@@ -8,6 +8,8 @@ import { useState } from "react";
 import Auth from './components/Auth';
 import Pagenotfound from './components/Pageoutfound/Pagenotfound';
 import { TableProvider } from './components/Context/TableContext';
+import { ToastContainer } from 'react-toastify';
+import toast, { Toaster } from 'react-hot-toast';
 function App() {
   const [state, setState] = useState({
     isLoggedIn: false,
@@ -25,9 +27,13 @@ function App() {
     });
   };
   return (
+    <>
+    
     <div className="App">
      <loginContext.Provider value={{ state, fnLoggedIn, fnLoggedOut }}>
+     
       <TableProvider>
+ 
         <Header />
 
         <Routes>
@@ -42,10 +48,14 @@ function App() {
           />
           <Route path="*" element={<Pagenotfound />} />
         </Routes>
+        <Toaster position='top-center'/>
         </TableProvider>
       </loginContext.Provider>
       {/* <Nav /> */}
     </div>
+    
+
+    </>
   );
 }
 

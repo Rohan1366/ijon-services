@@ -2,6 +2,7 @@ import React from 'react'
 import { useContext } from "react";
 import { loginContext } from '../Context/LoginContext';
 import { Link } from "react-router-dom";
+import toast from 'react-hot-toast';
 var divStyle = {
     backgroundColor: "black",
     padding: "20px",
@@ -36,6 +37,7 @@ const Header = () => {
             style={{ marginRight: "50px" }}
             onClick={() => {
               fnLoggedOut();
+              toast.success("sucessfully Logout! ")
             }}
           >
             Logout

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useTable } from './Context/TableContext';
 import './Form.css'
+import toast from 'react-hot-toast';
 const Form = () => {
   const { dispatch } = useTable();
   const [formData, setFormData] = useState({ name: '', age: '', email: '' });
@@ -20,7 +21,8 @@ const Form = () => {
     };
 
     dispatch({ type: 'ADD_ROW', payload: newRow });
-    alert('added new user!')
+    
+    toast.success("added new user!" );
   };
 
   return (
