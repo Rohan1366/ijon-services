@@ -6,10 +6,7 @@ This is a React table component with pagination, add, and delete row functionali
 
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Documentation](#documentation)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Features
 
