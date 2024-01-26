@@ -13,7 +13,7 @@ const Form = () => {
   };
 
   const handleAddRow = () => {
-    // Validate form data if needed
+   
     const newRow = {
       name: formData.name,
       age: parseInt(formData.age),

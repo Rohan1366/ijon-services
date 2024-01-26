@@ -43,8 +43,10 @@ const handlePageChange = (newPage) => {
               color:"white",
               borderRadius:"5px",
               cursor:"pointer"}} >ADD</button>
-                {state.isFormOpen && <Form />}</div>
-               
+    {state.isFormOpen && <Form />}</div>
+    {state.loading ? ( 
+        <div>Loading...</div>
+      ) : ( 
         <table className="my-table">
       <thead>
         <tr>
@@ -71,7 +73,7 @@ const handlePageChange = (newPage) => {
             </tr>
           ))}
       </tbody>
-    </table>
+    </table>)}
     <div className="pagination">
         
         <span style={{marginTop:"-10px"}}>{`Page${currentPage}of ${totalPages}`}</span>

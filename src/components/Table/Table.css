@@ -16,16 +16,16 @@
   }
   
   .my-table th {
-    background-color: #205323; /* Green color for thead */
+    background-color: #205323; 
     color: white;
   }
   
   .my-table tbody tr:nth-child(even) {
-    background-color: #f2f2f2; /* Alternate row color */
+    background-color: #f2f2f2; 
   }
   .pagination{
     position: fixed;
-    bottom: 100px; /* Adjust as needed */
+    bottom: 100px; 
     text-align: end;
     margin-right: 110px;
     right: 0%;

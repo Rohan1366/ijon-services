@@ -5,17 +5,18 @@ const TableContext = createContext();
 
 const initialState = {
   tableData: [
-    // Initial data
+    
     { id: 1, name: 'John Doe', age: 25, email: 'john@example.com' },
     { id: 2, name: 'Jane Doe', age: 30, email: 'jane@example.com' },
     { id: 3, name: 'Bob Smith', age: 28, email: 'bob@example.com' },
     { id: 4, name: 'Alice Johnson', age: 22, email: 'alice@example.com' },
     { id: 5, name: 'Charlie Brown', age: 35, email: 'charlie@example.com' },
     { id: 6, name: 'Eva Williams', age: 27, email: 'eva@example.com' },
-    // ... (other initial data)
+    
   ],
   isFormOpen: false,
-  nextId: 7, // Initial next available id
+  nextId: 7, 
+  loading: false,
 };
 
 const tableReducer = (state, action) => {
@@ -35,6 +36,11 @@ const tableReducer = (state, action) => {
       return {
         ...state,
         tableData: state.tableData.filter((row) => row.id !== action.payload),
+      };
+      case 'SET_LOADING':
+      return {
+        ...state,
+        loading: action.payload,
       };
     
     default:
